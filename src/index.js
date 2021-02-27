@@ -1,14 +1,14 @@
 module.exports = function check(str, bracketsConfig) {
   let same;
-  for (let el in arr) {
-    if (arr[el][0] === arr[el][1]) {
-      same = arr[el][0]
+  for (let el in bracketsConfig) {
+    if (bracketsConfig[el][0] === bracketsConfig[el][1]) {
+      same = bracketsConfig[el][0]
     }
   }
   let n = 1;
-  let brackets = arr.flat().join('');
+  let brackets = bracketsConfig.flat().join('');
   let stack = [];
-  for (let bracket of input) {
+  for (let bracket of str) {
     let bracketIndex = brackets.indexOf(bracket);
     if (bracketIndex % 2 === 0) {
       if (bracket === same && n === 1){
